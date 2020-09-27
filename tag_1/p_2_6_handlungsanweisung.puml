@@ -1,0 +1,28 @@
+@startuml
+start
+if (Funktioniert das System?) then (JA )
+    :Fummel nicht \n daran herum.;
+    :Alles wird gut.;
+    stop
+else ( NEIN)
+    if (Bist du Schuld?) then (JA )
+        :Du Idiot!;
+        if (Hat es jemand \n     gemerkt?) then (JA )
+            :  Du bist \n im Arsch!;
+            if (Kannst Du einem Anderen \n  die Schuld zuschieben?) then (JA )
+                :Keine Sorge, jemand \n anderes ist im Arsch.;
+                stop
+            else ( NEIN)
+                :Du bist wirklich \n      im Arsch!;
+                stop
+            endif
+        else ( NEIN)
+            :Man wird Dich \n    nie finden.;
+            stop
+        endif
+    else ( NEIN)
+        :Dich trifft es nicht.;
+        stop
+    endif
+endif
+@enduml

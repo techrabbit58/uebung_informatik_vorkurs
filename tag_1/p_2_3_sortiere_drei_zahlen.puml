@@ -1,0 +1,32 @@
+@startuml
+
+start
+
+partition Eingabe {
+    :Lese Zahl A ein.|
+    :Lese Zahl B ein.|
+    :Lese Zahl C ein.|
+}
+
+partition "Verarbeitung (Sortierung)" {
+    if (A <= C <= B) then (ja)
+        :Z:=B\nB:=C\nC:=Z]
+    elseif (B <= A <= C) then (ja)
+        :Z:=A\nA:=B\nB:=Z]
+    elseif (B <= C <= A) then (ja)
+        :Z:=A\nA:=B\nB:=C\nC:=Z]
+    elseif (C <= A <= B) then (ja)
+        :Z:=B\nA:=C\nB:=A\nC:=Z]
+    elseif (C <= B <= A) then (ja)
+        :Z:=A\nA:=C\nC:=Z]
+    else (nein)
+    endif
+}
+
+partition "Ausgabe der Ergebnisse" {
+    :Drucke Werte von A, B und C in Alphabetfolge.|
+}
+
+stop
+
+@enduml

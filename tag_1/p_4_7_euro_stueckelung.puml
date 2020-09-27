@@ -1,0 +1,38 @@
+@startuml
+start
+package Vorbereitung {
+    :Werteliste erstellen|
+    :Stueckelungsliste erstellen|
+    if (Länge(Werteliste) == Länge(Stückelungsliste)) then (nein)
+        :Datenfehler in der Stückelung!}
+        stop
+    else (ja)
+    endif
+}
+package Eingabe {
+    :Betrag in EUR eingeben<
+    :Betrag in Euro-Cent umrechnen|
+    :Betrag in Euro-Cent bestätigen>
+}
+package Verarbeitung" {
+    :Stück := erstes Stück aus der Liste]
+    :Restbetrag := Betrag]
+    :Ergebnisliste := <leer>]
+    while (       Restbetrag > 0       )
+        :Anzahl := ganzzahlig Restbetrag / Stück]
+        if (          Anzahl > 0          ) then (ja)
+            :Anzahl und
+            aktuelles Stück
+            an Ergebnisliste
+            anhängen]
+        else (nein)
+        endif
+        :Restbetrag := Divisionsrest von Restbetrag / Stück]
+        :Stück := nächstes Stück aus der Liste]
+    end while
+}
+package "Ausgabe" {
+    :Ergebnisliste drucken/
+}
+stop
+@enduml
