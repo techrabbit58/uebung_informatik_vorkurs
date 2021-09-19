@@ -6,7 +6,15 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-pytest = "*"
+pytest = "==6.2.5"
+attrs = "==21.2.0"
+colorama = "==0.4.4"
+iniconfig = "==1.1.1"
+pluggy = "==1.0.0"
+packaging = "==21.0"
+six = "==1.16.0"
+toml = "==0.10.2"
+more-itertools = "==8.10.0"
 
 [requires]
 python_version = "3.8"
