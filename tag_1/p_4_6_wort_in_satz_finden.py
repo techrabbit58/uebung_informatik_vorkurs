@@ -4,7 +4,7 @@
 vorkommt und gib das Ergebnis zurück.
 
 Beispiel:
-    - Eingabe: 'Anneliese sitzt im Home Office am PC und arbeitet.' und 'Office'
+    - Eingabe: 'Anneliese sitzt im Homeoffice am PC und arbeitet.' und 'Office'
     - Antwort: Das Wort kommt im gegebenen Satz vor.
 """
 

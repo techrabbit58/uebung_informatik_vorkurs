@@ -9,7 +9,7 @@ Schreiben Sie eine Funktion 'lotto()', welche sechs Zufallszahlen von 1 bis 49 a
 - Wie garantiert man, dass diese im gewünschten Zahlenbereich sind?
     1 - Liste der Zahlen 1 bis 49 erstellen
     2 - Mittels random.shuffle() die Reihenfolge zufällig wählen
-    3 - Die ersten sechs Zahlen der Liste ausgeben
+    3 - die ersten sechs Zahlen der Liste ausgeben
 
     Da jede Zahl nur einmal in der Liste stand und zum gewünschten Bereich gehört und
     keine Zahlen außerhalb des Bereiches vorkommen, ist eine gültige Ausgabe garantiert.

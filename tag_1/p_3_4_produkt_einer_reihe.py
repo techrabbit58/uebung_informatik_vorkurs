@@ -10,7 +10,7 @@ Beispiel: Ergebnis für n=20 ist 21
 
 def produkt(k, limit, ausdruck):
     antwort = 1
-    for x in range(1, limit + 1):
+    for x in range(k, limit + 1):
         antwort *= ausdruck(x)
     return antwort
 
