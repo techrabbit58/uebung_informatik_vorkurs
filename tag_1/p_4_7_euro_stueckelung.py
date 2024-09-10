@@ -1,6 +1,6 @@
 """
 4 Listen (Tag 1)
-4.6 Schreibe ein Programm, das als Eingabe einen Geldbetrag in EUR entgegen nimmt und daraus
+4.6 Schreibe ein Programm, das als Eingabe einen Geldbetrag in EUR entgegennimmt und daraus
 die Art und Anzahl an Geldscheinen und/oder Münzen ermittelt, die erforderlich sind, um den
 gegebenen Betrag in Bar zu begleichen.
 """

@@ -8,7 +8,7 @@ Eigenschaft "lebendig" haben diese Zellen keine weiteren Eigenschaften oder
 Fähigkeiten.
 
 Die Zellen siedeln auf einem in gleich große Felder eingeteilten Raster, das in Zeilen
-und Spalten organisiert ist. Jede Feld hat eine durch ein Zahlenpaar (x, y) gekennzeichnete
+und Spalten organisiert ist. Jedes Feld hat eine durch ein Zahlenpaar (x, y) gekennzeichnete
 Positionskennung (Koordinaten). Die Koordinaten zweier benachbarter Zellen liegen bezüglich
 x und y maximal um 1 voneinander entfernt.
 
@@ -81,14 +81,14 @@ Simulationsregeln und die Visualisierung des Rasters zu ermöglichen:
                                                     # Rastersegmentes
     Colony = Set[Pair]                        # Die Koordinaten der besiedelten Rasterpunkte
 
-    init() -> Colony                          # Festlegen der Ausgangssituation
-    area(colony: Colony) -> Area              # Ursprungskoordinate und Größe des besiedelten
+    init() → Colony                          # Festlegen der Ausgangssituation
+    area(colony: Colony) → Area              # Ursprungskoordinate und Größe des besiedelten
                                               # Rastersegment ermitteln
-    neighbour_count(pos: Pair, colony: Colony) -> int   # Die Anzahl der Nachbarn eines
+    neighbour_count(pos: Pair, colony: Colony) → int   # Die Anzahl der Nachbarn eines
                                                         # Rasterpunktes
-    neighbours(pos: Pair) -> Pair, ...        # Generator, der die Nachbar-Positionen
+    neighbours(pos: Pair) → Pair, ...        # Generator, der die Nachbarpositionen
                                               # eines Rasterpunktes aufzählt
-    visualize(colony: Colony) -> str          # Erzeuge eine druckbare Representation des
+    visualize(colony: Colony) → str          # Erzeuge eine druckbare Representation des
                                               # besiedelten Rastersegmentes
     next_generation(colony: Colony): Colony   # Berechnet die Ausgangssituation für die nächste
                                               # Runde
@@ -170,7 +170,7 @@ def neighbour_count(pos: Pair, colony: Colony) -> int:
 def next_generation(colony: Colony) -> Colony:
     """
     Für die Erzeugung der nächsten Generation muss rund um die Kolonie ein Wachstumsstreifen der Breite 1
-    bereitgestellt werden, und der Ursprung muss um -1 in x- und y- Richtung verschoben werden.
+    bereitgestellt werden, und der Ursprung muss um -1 jeweils in x- und in y-Richtung verschoben werden.
     """
     x, y, width, height = area(colony)
     x -= 1
@@ -188,8 +188,8 @@ def next_generation(colony: Colony) -> Colony:
 
 
 if __name__ == '__main__':
-    colony = init()
-    print(visualize(colony))
+    population = init()
+    print(visualize(population))
     while True:
         s = input('Anzahl Runden (.le. 0 für Stop)? ')
         try:
@@ -200,7 +200,7 @@ if __name__ == '__main__':
         if rounds_to_go <= 0:
             break
         for _ in range(0, rounds_to_go):
-            colony = next_generation(colony)
-            print(visualize(colony))
+            population = next_generation(population)
+            print(visualize(population))
             time.sleep(.25)
     print('Auf Wiedersehen!')

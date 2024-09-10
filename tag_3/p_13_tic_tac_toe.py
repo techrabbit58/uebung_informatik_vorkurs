@@ -58,9 +58,9 @@ beider spielenden Personen wird am Ende eines Durchganges vom Programm angezeigt
 
 class Player:
 
-    def __init__(self, name, symbol):
+    def __init__(self, name, s):
         self.name = name.capitalize()
-        self.symbol = symbol
+        self.symbol = s
         self.result = 0
 
     def score(self, points):
@@ -76,8 +76,8 @@ class Board:
         """Das Feld mit der Null wird ignoriert."""
         self.fields = [n for n in range(10)]
 
-    def set(self, symbol, index):
-        self.fields[index] = symbol
+    def set(self, s, index):
+        self.fields[index] = s
 
     def choices(self):
         return [n for n in self.fields[1:] if str(n) not in 'XO']
@@ -90,8 +90,8 @@ class Board:
         ))
 
 
-def swap_symbols(player_a, player_b):
-    player_a.symbol, player_b.symbol = player_b.symbol, player_a.symbol
+def swap_symbols(a, b):
+    a.symbol, b.symbol = b.symbol, a.symbol
 
 
 def symbol(player):
@@ -101,9 +101,9 @@ def symbol(player):
 class Game:
     triples = ([1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 4, 7], [2, 5, 8], [3, 6, 9], [1, 5, 9], [7, 5, 3])
 
-    def __init__(self, player_a, player_b):
-        self.active = player_a
-        self.waiting = player_b
+    def __init__(self, a, b):
+        self.active = a
+        self.waiting = b
         self.board = Board()
         self.result = 0
 

@@ -9,7 +9,7 @@ Der Median sei definiert, wie folgt:
 
                  | x[(n + 1) // 2]                      falls n ungerade
     median(x) := <
-                 | 0.5 * (x[n // 2] + x[(n // 2 + 1])   falls n gerade
+                 | 0.5 * (x[n // 2] + x[(n // 2) + 1])   falls n gerade
 
     ACHTUNG! Weil in Python Listenelemente aufsteigend nicht mit 1, 2, 3, ...
     sondern mit 0, 1, 2, ... gezählt werden, müssen die errechneten Indizes jeweils um 1

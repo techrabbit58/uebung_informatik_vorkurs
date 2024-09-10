@@ -4,14 +4,14 @@
 Schreibe eine kleine Taschenrechner-Applikation, der die Methoden Addieren, Subtrahieren, Multiplizieren und
 Dividieren beherrscht.
 
-Der Taschenrechner soll seine Eingaben über ein Terminal-Interface ("Konsole") entgegen nehmen und
+Der Taschenrechner soll seine Eingaben über ein Terminal-Interface ("Konsole") entgegennehmen und
 die Ergebnisse auf die Konsole ausgeben ("drucken").
 
 Benutzerinnen dürfen nur Zahlen (Operanden) oder Operatoren eingeben. Da nur ein 4-Spezies-Rechner gefordert
 ist, sind alle Operationen binär.
 
 Vereinfachend wird angenommen, dass der Taschenrechner nach der sogenannten umgekehrten polnischen Notation (UPN)
-entgegen nimmt. Auf einer Eingabezahle dürfen Operanden und Operatoren gemäß UPN Regeln durch Leerzeichen
+entgegennimmt. Auf einer Eingabezahle dürfen Operanden und Operatoren gemäß UPN Regeln durch Leerzeichen
 getrennt eingegeben werden.
 
 Wird ein Functions (eine Zahl) vom Rechner erkannt, wird dieser gespeichert ('push = x'). Zur Speicherung verwendet

@@ -22,8 +22,8 @@ def summef(*, k, limit, ausdruck):
 
 def summew(*, k, limit, ausdruck):
     antwort = 0
-    x = 1
-    while x <= 100:
+    x = k
+    while x <= limit:
         antwort = antwort + ausdruck(x)
         x = x + 1
     return antwort

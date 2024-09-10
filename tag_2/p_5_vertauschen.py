@@ -13,7 +13,7 @@ Z u m  V o r g e h e n
     Weil es in Python geht: durch simultanen Tausch a, b == b, a
 
 - Wie vergewissert man sich, dass der Tausch geklappt hat?
-    Mit Hilfe eines oder mehrerer Unit Tests.
+    Mithilfe eines oder mehrerer Unittests.
 """
 
 

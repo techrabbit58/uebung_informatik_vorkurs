@@ -1,6 +1,6 @@
 """
 1 Einstieg (Tag 0)
-1.4 Dividiere 2 Zahlen. Was passiert, wenn Du durch Null teilst?
+1.4 Dividiere 2 Zahlen. Was passiert, wenn Du durch null teilst?
 """
 from hilfprogramme import float_number_input
 

@@ -11,7 +11,7 @@ Wie sollte ich dabei Groß- und Kleinschreibung behandeln?
 
 Die Funktion sollte mit einem oder mehreren Wörtern getestet werden.
 
-Beispiel: caesar -- k=3 --> fdhvdu
+Beispiel: caesar -- k=3 → fdhvdu
 """
 
 

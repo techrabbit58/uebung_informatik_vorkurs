@@ -28,12 +28,12 @@ Z u m  V o r g e h e n
           Preisliste heraus gesucht und mit der Anzahl aus der Posten-Liste multipliziert.
         - Das Ergebnis wird dem Gesamtpreis addiert.
         - Wenn alle Posten erfasst wurden, ist der Gesamtpreis das Ergebnis und
-          wird an den Aufrufer der Funktion zurück gegeben.
+          wird an den Aufrufer der Funktion zurückgegeben.
         - Alle Werte und Berechnungen verwenden Beträge in ct.
 
     - Was gibt die Funktion als Rückgabewert?
         - Summe aller Einzelpreise aus der Preisliste, multipliziert mit den Artikelanzahlen
-          aus der Quantitäten-Liste, geteilt durch 100, so dass sich EUR Beträge ergeben.
+          aus der Quantitäten-Liste, geteilt durch 100, sodass sich EUR Beträge ergeben.
 """
 from collections import namedtuple
 from typing import List, Dict
